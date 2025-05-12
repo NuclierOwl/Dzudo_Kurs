@@ -1,0 +1,56 @@
+using Avalonia.Controls;
+using Dzudo.ViewModels;
+using Kurs_Dzudo.Hardik.Connector.Date;
+using System.Collections.Generic;
+using System.Linq;
+using ukhasnikis_BD_Sec.Hardik.Connect;
+
+namespace Kurs_Dzudo;
+
+public partial class GestWindow : Window
+{
+    private readonly DatabaseConnection _dbConnection;
+    private List<Tatami> _tatamis;
+    private List<Group> _groups;
+
+    //public DataGrid ParticipantsDataGrid { get; private set; }
+    //public DataGrid MatchesDataGrid { get; private set; }
+
+    public GestWindow()
+    {
+        InitializeComponent();
+        _dbConnection = new DatabaseConnection();
+        DataContext = new GestViewModel();
+        LoadTatamis();
+    }
+
+    private void LoadTatamis()
+    {
+        _tatamis = _dbConnection.GetAllTatamis();
+        TatamiComboBox.ItemsSource = _tatamis;
+        if (_tatamis.Any())
+        {
+            TatamiComboBox.SelectedIndex = 0;
+        }
+    }
+
+    private void OnTatamiSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (TatamiComboBox.SelectedItem is Tatami selectedTatami)
+        {
+            _groups = _dbConnection.GetGroupsForTatami(selectedTatami.Id);
+            GroupComboBox.ItemsSource = _groups;
+
+            var participants = _groups.SelectMany(g => g.Participants).Distinct().ToList();
+            ParticipantsDataGrid.ItemsSource = participants;
+        }
+    }
+
+    private void OnGroupSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (GroupComboBox.SelectedItem is Group selectedGroup)
+        {
+            MatchesDataGrid.ItemsSource = selectedGroup.Matches;
+        }
+    }
+}

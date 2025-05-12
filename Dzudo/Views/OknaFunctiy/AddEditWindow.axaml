@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:Kurs_Dzudo.ViewModels"
+        xmlns:model="using:Kurs_Dzudo.Hardik.Connector.Date"
+        mc:Ignorable="d"
+        d:DesignWidth="400"
+        d:DesignHeight="450"
+        x:Class="Kurs_Dzudo.Views.OknaFunctiy.AddEditWindow"
+        Title="{Binding WindowTitle}"
+        x:DataType="vm:AddEditViewModel">
+
+	<Design.DataContext>
+		<vm:AddEditViewModel/>
+	</Design.DataContext>
+
+	<Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"
+          ColumnDefinitions="Auto,*"
+          Margin="10">
+		<TextBlock Text="Имя:"
+                   Grid.Row="0" Grid.Column="0"
+                   VerticalAlignment="Center"/>
+		<TextBox Text="{Binding CurrentParticipant.Name, Mode=TwoWay}"
+                 Grid.Row="0" Grid.Column="1"
+                 Margin="5"/>
+
+		<TextBlock Text="Фамилия:"
+                   Grid.Row="1" Grid.Column="0"
+                   VerticalAlignment="Center"/>
+		<TextBox Text="{Binding CurrentParticipant.SecName, Mode=TwoWay}"
+                 Grid.Row="1" Grid.Column="1"
+                 Margin="5"/>
+
+		<TextBlock Text="Дата соревнований:"
+                   Grid.Row="2" Grid.Column="0"
+                   VerticalAlignment="Center"/>
+		<DatePicker SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
+            Grid.Row="2" Grid.Column="1"
+            Margin="5"/>
+
+		<TextBlock Text="Клуб:"
+                   Grid.Row="3" Grid.Column="0"
+                   VerticalAlignment="Center"/>
+		<TextBox Text="{Binding CurrentParticipant.Club, Mode=TwoWay}"
+                 Grid.Row="3" Grid.Column="1"
+                 Margin="5"/>
+
+		<TextBlock Text="Адрес:"
+                   Grid.Row="4" Grid.Column="0"
+                   VerticalAlignment="Center"/>
+		<TextBox Text="{Binding CurrentParticipant.Adres, Mode=TwoWay}"
+                 Grid.Row="4" Grid.Column="1"
+                 Margin="5"/>
+
+		<TextBlock Text="Вес:"
+                   Grid.Row="5" Grid.Column="0"
+                   VerticalAlignment="Center"/>
+		<TextBox Text="{Binding CurrentParticipant.Ves, Mode=TwoWay}"
+                 Grid.Row="5" Grid.Column="1"
+                 Margin="5"/>
+
+		<StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.Row="7"
+                    Grid.ColumnSpan="2"
+                    Margin="0,10,0,0">
+			<Button Content="Сохранить"
+                    Command="{Binding SaveCommand}"
+                    Margin="0,0,10,0"
+                    Width="100"/>
+			<Button Content="Отмена"
+                    Command="{Binding CancelCommand}"
+                    Width="100"/>
+		</StackPanel>
+	</Grid>
+</Window>

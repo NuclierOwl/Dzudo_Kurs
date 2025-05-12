@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Kurs_Dzudo.ViewModels"
+		x:DataType="vm:MatchViewModel"
+        x:Class="Kurs_Dzudo.Views.OknaFunctiy.ControlWindow"
+        Title="Управление соревнованиями">
+
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+			<ComboBox ItemsSource="{Binding AvailableTatamis}"
+                      SelectedItem="{Binding SelectedTatami}"
+                      Width="150"/>
+
+			
+			<Button Content="Загрузить группы"
+                    Command="{Binding LoadGroupsCommand}"/>
+		</StackPanel>
+
+		<ContentControl Content="{Binding PublicDisplayViewModel}"
+						DockPanel.Dock="Left"
+						Width="400"/>
+
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<StackPanel Grid.Column="0">
+				<TextBlock Text="{Binding CurrentMatch.Info}"/>
+				<StackPanel Orientation="Horizontal">
+					<Button Content="Белый иппон" Command="{Binding AddIpponCommand}"
+                            CommandParameter="White"/>
+					<Button Content="Красный иппон" Command="{Binding AddIpponCommand}"
+                            CommandParameter="Red"/>
+				</StackPanel>
+			</StackPanel>
+
+			<StackPanel Grid.Column="1">
+				<TextBlock Text="{Binding MainTimer}" FontSize="24"/>
+				<Button Content="Старт/Стоп" Command="{Binding ToggleMainTimerCommand}"/>
+
+				<TextBlock Text="{Binding HoldTimer}" FontSize="24"/>
+				<Button Content="Удержание" Command="{Binding ToggleHoldTimerCommand}"/>
+
+				<Button Content="Конец схватки" Command="{Binding EndMatchCommand}"/>
+			</StackPanel>
+		</Grid>
+	</DockPanel>
+</Window>
