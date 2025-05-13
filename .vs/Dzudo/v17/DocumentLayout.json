@@ -82,8 +82,7 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAmwBYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:18:49.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:18:49.399Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\GestViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:18:04.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:18:04.183Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\TablickaViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:11.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:11.046Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\ParticipantsViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:08.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:08.084Z"
             },
             {
               "$type": "Document",
@@ -146,8 +142,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\MatchViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:04.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:04.553Z"
             },
             {
               "$type": "Document",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\ControlViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:00.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:00.835Z"
             },
             {
               "$type": "Document",
@@ -172,8 +166,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\AddEditViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:47.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:47.178Z"
             },
             {
               "$type": "Document",
@@ -185,8 +178,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\ConnectorV2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:27.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:27.601Z"
             },
             {
               "$type": "Document",
@@ -198,8 +190,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Connecter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:25.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:25.589Z"
             },
             {
               "$type": "Document",
@@ -211,8 +202,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\MainWindowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:35:22.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:35:22.965Z"
             }
           ]
         }
