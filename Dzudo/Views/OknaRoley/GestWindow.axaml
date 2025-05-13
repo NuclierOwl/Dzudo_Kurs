@@ -10,10 +10,12 @@
         Title="Гость"
 		x:DataType="dm:GestViewModel">
 	<DockPanel Margin="10">
-		<ComboBox x:Name="TatamiComboBox" x:FieldModifier="public" DockPanel.Dock="Top" Margin="0,0,0,10"
-                  SelectionChanged="OnTatamiSelectionChanged">
+		<ComboBox x:Name="TatamiComboBox"
+          ItemsSource="{Binding Tatamis}"
+          SelectedItem="{Binding SelectedTatami}"
+          DockPanel.Dock="Top" Margin="0,0,0,10">
 			<ComboBox.ItemTemplate>
-				<DataTemplate x:DataType="local:Tatami">
+				<DataTemplate>
 					<TextBlock Text="{Binding Id}"/>
 				</DataTemplate>
 			</ComboBox.ItemTemplate>

@@ -78,6 +78,46 @@ public class GestViewModel : INotifyPropertyChanged
         Matches = group.Matches;
     }
 
+    public void OnTatamiSelectionChanged(Tatami selectedTatami)
+    {
+        if (selectedTatami != null)
+        {
+            LoadGroupsForTatami(selectedTatami.Id);
+        }
+    }
+
+    public void OnGroupSelectionChanged(Group selectedGroup)
+    {
+        if (selectedGroup != null)
+        {
+            LoadMatchesForGroup(selectedGroup);
+        }
+    }
+
+    private Tatami _selectedTatami;
+    public Tatami SelectedTatami
+    {
+        get => _selectedTatami;
+        set
+        {
+            _selectedTatami = value;
+            OnPropertyChanged();
+            OnTatamiSelectionChanged(value);
+        }
+    }
+
+    private Group _selectedGroup;
+    public Group SelectedGroup
+    {
+        get => _selectedGroup;
+        set
+        {
+            _selectedGroup = value;
+            OnPropertyChanged();
+            OnGroupSelectionChanged(value);
+        }
+    }
+
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
