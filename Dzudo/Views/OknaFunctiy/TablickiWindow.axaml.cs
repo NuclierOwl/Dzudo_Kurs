@@ -11,10 +11,5 @@ namespace Kurs_Dzudo
             InitializeComponent();
             DataContext = new TablickaViewModel(this);
         }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }
