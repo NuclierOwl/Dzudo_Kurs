@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\Dzudo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\viewmodels\\tablickaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\viewmodels\\tablickaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\views\\oknafunctiy\\tablickiwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -16,10 +20,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\hardik\\connector\\date\\groupdao-2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\hardik\\connector\\date\\groupdao-2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\hardik\\connector\\date\\matchdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,7 +109,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -129,20 +129,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Dispatcher.cs",
               "DocumentMoniker": "C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
-              "ToolTip": "C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ToolTip": "C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
               "ViewState": "AgIAANIAAAAAAAAAAAAAwN0AAAADAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T11:09:48.854Z",
-              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GroupDao-2.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
@@ -150,8 +150,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T10:33:04.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T10:33:04.201Z"
             },
             {
               "$type": "Document",
@@ -163,8 +162,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\ConnectorV2.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAAANoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:04:45.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T12:04:45.064Z"
             },
             {
               "$type": "Document",
@@ -176,8 +174,7 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAIBQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:21:18.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T11:21:18.103Z"
             },
             {
               "$type": "Document",
@@ -187,14 +184,14 @@
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\TablickaViewModel.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\TablickaViewModel.cs",
               "RelativeToolTip": "Dzudo\\ViewModels\\TablickaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T11:09:05.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TablickiWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml.cs",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml.cs",
@@ -202,8 +199,7 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:08:54.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T11:08:54.481Z"
             },
             {
               "$type": "Document",
@@ -214,8 +210,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:44:31.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:44:31.839Z"
             },
             {
               "$type": "Document",
@@ -226,8 +221,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\AdminWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\AdminWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:27:55.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:27:55.708Z"
             },
             {
               "$type": "Document",
@@ -239,8 +233,7 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\AdminWindow.axaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAswBYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:29:55.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:29:55.858Z"
             },
             {
               "$type": "Document",
@@ -252,8 +245,7 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\UserWindow.axaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAIBJwBUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:28:28.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:28:28.053Z"
             },
             {
               "$type": "Document",
@@ -264,12 +256,11 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\UserWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\UserWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:28:00.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:28:00.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "TablickiWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml",
@@ -288,8 +279,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\ControlWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\ControlWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:07:29.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:07:29.347Z"
             },
             {
               "$type": "Document",
@@ -301,8 +291,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\GroupDao.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:04:06.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:04:06.089Z"
             },
             {
               "$type": "Document",
@@ -314,8 +303,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\TatamiDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:54.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:03:54.269Z"
             },
             {
               "$type": "Document",
@@ -327,8 +315,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\UkhasnikiDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:43.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:03:43.469Z"
             },
             {
               "$type": "Document",
@@ -340,8 +327,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\MatchDao.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAuwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:31.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:03:31.109Z"
             },
             {
               "$type": "Document",
@@ -353,8 +339,7 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:18:49.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:18:49.399Z"
             },
             {
               "$type": "Document",
@@ -366,8 +351,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\GestViewModel.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAIBJwHYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:18:04.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:18:04.183Z"
             },
             {
               "$type": "Document",
@@ -378,8 +362,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\GestWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-12T09:17:06.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:17:06.924Z"
             },
             {
               "$type": "Document",
@@ -391,8 +374,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\ParticipantsViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:08.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:08.084Z"
             },
             {
               "$type": "Document",
@@ -404,8 +386,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\MatchViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:04.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:04.553Z"
             },
             {
               "$type": "Document",
@@ -417,8 +398,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\AddEditViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:47.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:47.178Z"
             },
             {
               "$type": "Document",
@@ -430,8 +410,7 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Connecter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:25.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:25.589Z"
             },
             {
               "$type": "Document",
@@ -443,8 +422,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\MainWindowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:35:22.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:35:22.965Z"
             }
           ]
         }

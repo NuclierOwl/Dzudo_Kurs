@@ -3,8 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\Dzudo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\viewmodels\\tablickaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\viewmodels\\tablickaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\views\\oknafunctiy\\tablickiwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +20,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\hardik\\connector\\date\\groupdao-2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\hardik\\connector\\date\\groupdao-2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|solutionrelative:dzudo\\views\\oknafunctiy\\tablickiwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BD0D729-B22E-4EC3-BB3C-51DAB2F0BB31}|Dzudo\\Dzudo.csproj|c:\\users\\pc\\source\\repos\\dzudo\\dzudo\\hardik\\connector\\date\\matchdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +109,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -127,19 +130,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GroupDao-2.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
-              "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs*",
-              "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Title": "Dispatcher.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
+              "ToolTip": "C:\\Users\\PC\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fb6d3f88e02a22992112304e15fd943684665d6124894f2da5b21ce3f04a7f36\\Dispatcher.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAwN0AAAADAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T10:33:04.201Z",
+              "WhenOpened": "2025-05-14T11:09:48.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
+              "Title": "GroupDao-2.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
+              "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
+              "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\GroupDao-2.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T10:33:04.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ConnectorV2.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\ConnectorV2.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\ConnectorV2.cs",
@@ -147,12 +162,11 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\ConnectorV2.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAAANoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:04:45.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T12:04:45.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AddEditWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml.cs",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml.cs",
@@ -160,25 +174,24 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAIBQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:21:18.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T11:21:18.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TablickaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\TablickaViewModel.cs",
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\TablickaViewModel.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\TablickaViewModel.cs",
               "RelativeToolTip": "Dzudo\\ViewModels\\TablickaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T11:09:05.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TablickiWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml.cs",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml.cs",
@@ -186,36 +199,33 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T11:08:54.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T11:08:54.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AddEditWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\AddEditWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:44:31.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:44:31.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AdminWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\AdminWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaRoley\\AdminWindow.axaml",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\AdminWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\AdminWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:27:55.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:27:55.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AdminWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\AdminWindow.axaml.cs",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaRoley\\AdminWindow.axaml.cs",
@@ -223,12 +233,11 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\AdminWindow.axaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAswBYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:29:55.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:29:55.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "UserWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\UserWindow.axaml.cs",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaRoley\\UserWindow.axaml.cs",
@@ -236,24 +245,22 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\UserWindow.axaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAIBJwBUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:28:28.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:28:28.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UserWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\UserWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaRoley\\UserWindow.axaml",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\UserWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\UserWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:28:00.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:28:00.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TablickiWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\TablickiWindow.axaml",
@@ -265,19 +272,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ControlWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\ControlWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaFunctiy\\ControlWindow.axaml",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaFunctiy\\ControlWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaFunctiy\\ControlWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T10:07:29.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:07:29.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "GroupDao.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\GroupDao.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\GroupDao.cs",
@@ -285,12 +291,11 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\GroupDao.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:04:06.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:04:06.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TatamiDao.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\TatamiDao.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\TatamiDao.cs",
@@ -298,12 +303,11 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\TatamiDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:54.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:03:54.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UkhasnikiDao.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\UkhasnikiDao.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\UkhasnikiDao.cs",
@@ -311,12 +315,11 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\UkhasnikiDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:43.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:03:43.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MatchDao.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Date\\MatchDao.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Date\\MatchDao.cs",
@@ -324,12 +327,11 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Date\\MatchDao.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAuwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:31.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T09:03:31.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "GestWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\GestWindow.axaml.cs",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml.cs",
@@ -337,12 +339,11 @@
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:18:49.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:18:49.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "GestViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\GestViewModel.cs",
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\GestViewModel.cs",
@@ -350,24 +351,22 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\GestViewModel.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAIBJwHYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:18:04.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:18:04.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "GestWindow.axaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\GestWindow.axaml",
               "RelativeDocumentMoniker": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Views\\OknaRoley\\GestWindow.axaml",
               "RelativeToolTip": "Dzudo\\Views\\OknaRoley\\GestWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-12T09:17:06.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:17:06.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ParticipantsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\ParticipantsViewModel.cs",
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\ParticipantsViewModel.cs",
@@ -375,12 +374,11 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\ParticipantsViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:08.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:08.084Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "MatchViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\MatchViewModel.cs",
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\MatchViewModel.cs",
@@ -388,12 +386,11 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\MatchViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:14:04.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:14:04.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AddEditViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\AddEditViewModel.cs",
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\AddEditViewModel.cs",
@@ -401,12 +398,11 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\AddEditViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:47.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:47.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Connecter.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Hardik\\Connector\\Connecter.cs",
               "RelativeDocumentMoniker": "Dzudo\\Hardik\\Connector\\Connecter.cs",
@@ -414,12 +410,11 @@
               "RelativeToolTip": "Dzudo\\Hardik\\Connector\\Connecter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:13:25.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T09:13:25.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "Dzudo\\ViewModels\\MainWindowViewModel.cs",
@@ -427,8 +422,7 @@
               "RelativeToolTip": "Dzudo\\ViewModels\\MainWindowViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:35:22.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T08:35:22.965Z"
             }
           ]
         }

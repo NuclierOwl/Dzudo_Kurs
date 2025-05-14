@@ -40,7 +40,7 @@
 					<DataTemplate>
 						<Border BorderBrush="Gray" BorderThickness="1" Margin="10" Padding="10">
 							<StackPanel>
-								<TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16"/>
+								<TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="16"/>
 
 								<DataGrid ItemsSource="{Binding Participants}"
                                           AutoGenerateColumns="False"
