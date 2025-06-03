@@ -37,15 +37,11 @@ public class FileImportService
 
     private List<UkhasnikiDao> ImportFromCsv(string filePath)
     {
-        // Implement CSV import logic
-        // Parse CSV and create UkhasnikiDao objects
         return new List<UkhasnikiDao>();
     }
 
     private List<UkhasnikiDao> ImportFromExcel(string filePath)
     {
-        // Implement Excel import logic
-        // Use a library like EPPlus or ClosedXML
         return new List<UkhasnikiDao>();
     }
 }

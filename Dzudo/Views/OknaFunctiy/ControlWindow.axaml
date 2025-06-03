@@ -11,11 +11,12 @@
                       SelectedItem="{Binding SelectedTatami}"
                       Width="150"/>
 
+			<Button Content="Назад" Click="Beak_Click"/>
 			
 			<Button Content="Загрузить группы"
                     Command="{Binding LoadGroupsCommand}"/>
 		</StackPanel>
-
+		
 		<ContentControl Content="{Binding PublicDisplayViewModel}"
 						DockPanel.Dock="Left"
 						Width="400"/>

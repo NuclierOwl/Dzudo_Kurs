@@ -1,4 +1,5 @@
-﻿using Kurs_Dzudo.Hardik.Connector.Date;
+﻿using Dzudo.Hardik.Connector.Date;
+using Kurs_Dzudo.Hardik.Connector.Date;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,7 +11,7 @@ public class GestViewModel : INotifyPropertyChanged
 {
     private readonly DatabaseConnection _dbConnection;
     private List<Tatami> _tatamis;
-    private List<Group> _groups;
+    private List<GroupDao_2> _groups;
     private IEnumerable<object> _participants;
     private IEnumerable<object> _matches;
 
@@ -26,7 +27,7 @@ public class GestViewModel : INotifyPropertyChanged
         }
     }
 
-    public List<Group> Groups
+    public List<GroupDao_2> Groups
     {
         get => _groups;
         set
@@ -73,7 +74,7 @@ public class GestViewModel : INotifyPropertyChanged
         Participants = Groups.SelectMany(g => g.Participants).Distinct().ToList();
     }
 
-    public void LoadMatchesForGroup(Group group)
+    public void LoadMatchesForGroup(GroupDao_2 group)
     {
         Matches = group.Matches;
     }
@@ -86,7 +87,7 @@ public class GestViewModel : INotifyPropertyChanged
         }
     }
 
-    public void OnGroupSelectionChanged(Group selectedGroup)
+    public void OnGroupSelectionChanged(GroupDao_2 selectedGroup)
     {
         if (selectedGroup != null)
         {
@@ -106,8 +107,8 @@ public class GestViewModel : INotifyPropertyChanged
         }
     }
 
-    private Group _selectedGroup;
-    public Group SelectedGroup
+    private GroupDao_2 _selectedGroup;
+    public GroupDao_2 SelectedGroup
     {
         get => _selectedGroup;
         set

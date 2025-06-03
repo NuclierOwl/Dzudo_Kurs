@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Kurs_Dzudo.Hardik.Connector.Date;
 public class Group
@@ -22,9 +23,7 @@ public class Group
         {
             for (int j = i + 1; j < Participants.Count; j++)
             {
-                matches.Add(new Match(
-                    Participants[i],
-                    Participants[j]));
+                // 
             }
         }
 

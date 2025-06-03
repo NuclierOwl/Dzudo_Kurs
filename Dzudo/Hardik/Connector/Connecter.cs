@@ -1,7 +1,6 @@
 ﻿using Dzudo.Hardik.Connector.Date;
 using Kurs_Dzudo.Hardik.Connector.Date;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace Kurs_Dzudo.Hardik.Connector
 {
@@ -23,7 +22,6 @@ namespace Kurs_Dzudo.Hardik.Connector
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
-
             mb.Entity<UkhasnikiDao>(entity =>
             {
                 entity.ToTable("ukhasniki", "Sec");
@@ -50,31 +48,35 @@ namespace Kurs_Dzudo.Hardik.Connector
             mb.Entity<Match>(entity =>
             {
                 entity.ToTable("matches", "Sec");
-                entity.HasKey(m => new { m.GroupId, m.Participant1Name, m.Participant2Name });
+                entity.HasKey(m => new { m.GroupId, m.participant1_name, m.participant2_name });
 
                 entity.HasOne(m => m.Participant1)
                       .WithMany()
-                      .HasForeignKey(m => m.Participant1Name)
+                      .HasForeignKey(m => m.participant1_name)
                       .HasPrincipalKey(u => u.Name)
                       .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(m => m.Participant2)
                       .WithMany()
-                      .HasForeignKey(m => m.Participant2Name)
+                      .HasForeignKey(m => m.participant2_name)
                       .HasPrincipalKey(u => u.Name)
                       .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(m => m.Winner)
                       .WithMany()
-                      .HasForeignKey(m => m.WinnerName)
+                      .HasForeignKey(m => m.winner_name)
                       .HasPrincipalKey(u => u.Name)
                       .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(m => m.Loser)
                       .WithMany()
-                      .HasForeignKey(m => m.LoserName)
+                      .HasForeignKey(m => m.loser_name)
                       .HasPrincipalKey(u => u.Name)
                       .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(m => m.Group)
+                      .WithMany()
+                      .HasForeignKey(m => m.GroupId);
             });
 
             mb.Entity<Tatami>(entity =>

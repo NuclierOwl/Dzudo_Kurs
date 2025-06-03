@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dzudo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27980656462348a4751410b1010da1a487b49d5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1c8f41f4d01c625882d1510570e0d8add4170ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dzudo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dzudo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

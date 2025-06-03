@@ -2,6 +2,9 @@
 using ReactiveUI;
 using System;
 using System.Reactive;
+using System.Reactive.Concurrency;
+using System.Threading.Tasks;
+using ukhasnikis_BD_Sec.Hardik.Connect;
 
 namespace Kurs_Dzudo.ViewModels
 {
@@ -55,7 +58,7 @@ namespace Kurs_Dzudo.ViewModels
                     {
                         CurrentParticipant.DateSorevnovaniy = default;
                     }
-                    this.RaisePropertyChanged();
+                    this.RaisePropertyChanged(nameof(SelectedDate));
                 }
             }
         }
@@ -67,20 +70,49 @@ namespace Kurs_Dzudo.ViewModels
 
         public AddEditViewModel()
         {
-            CurrentParticipant = new UkhasnikiDao();
-            SetupCommands();
+            RxApp.MainThreadScheduler.Schedule(() =>
+            {
+                CurrentParticipant = new UkhasnikiDao();
+                SetupCommands();
+            });
         }
 
         public AddEditViewModel(UkhasnikiDao participant)
         {
-            CurrentParticipant = participant;
-            SetupCommands();
+            RxApp.MainThreadScheduler.Schedule(() =>
+            {
+                CurrentParticipant = participant;
+                SetupCommands();
+            });
         }
 
         private void SetupCommands()
         {
-            SaveCommand = ReactiveCommand.Create(() => { });
+            SaveCommand = ReactiveCommand.CreateFromTask(SaveUkhasnikiAsync);
             CancelCommand = ReactiveCommand.Create(() => { });
+        }
+
+        private async Task SaveUkhasnikiAsync()
+        {
+            try
+            {
+                using (var db = new DatabaseConnection())
+                {
+                    if (CurrentParticipant.Name == null)
+                    {
+                        await db.AddUkhasnikiAsync(CurrentParticipant);
+                    }
+                    else
+                    {
+                        await Task.Run(() => db.Updateukhasniki(CurrentParticipant));
+                    }
+                }
+                RxApp.MainThreadScheduler.Schedule(() => {
+                });
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

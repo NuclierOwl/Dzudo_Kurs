@@ -4,6 +4,7 @@ using System.Linq;
 using Kurs_Dzudo.Hardik.Connector.Date;
 using ukhasnikis_BD_Sec.Hardik.Connect;
 using System.Reactive;
+using Dzudo.Hardik.Connector.Date;
 
 namespace Kurs_Dzudo.ViewModels
 {
@@ -60,7 +61,7 @@ namespace Kurs_Dzudo.ViewModels
             set => this.RaiseAndSetIfChanged(ref _holdTimer, value);
         }
 
-        public ObservableCollection<Group> Groups { get; } = new ObservableCollection<Group>();
+        public ObservableCollection<GroupDao_2> Groups { get; } = new ObservableCollection<GroupDao_2>();
         public ObservableCollection<UkhasnikiDao> AvailableTatamis { get; } = new ObservableCollection<UkhasnikiDao>();
         public MatchViewModel PublicDisplayViewModel { get; } = new MatchViewModel();
 

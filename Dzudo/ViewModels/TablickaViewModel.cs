@@ -14,15 +14,15 @@ namespace Kurs_Dzudo.ViewModels
 {
     public class TablickaViewModel : ReactiveObject
     {
-        private List<UkhasnikiDao> _participants;
-        private List<GroupDao_2> _groups;
+        private List<UkhasnikiDao> _participants = new List<UkhasnikiDao>();
+        private List<GroupDao_2> _groups = new List<GroupDao_2>();
         private string _searchText;
         private string _filterCategory = "Все";
 
         public List<GroupDao_2> Groups
         {
             get => _groups;
-            set => this.RaiseAndSetIfChanged(ref _groups, value);
+            set => this.RaiseAndSetIfChanged(ref _groups, value ?? new List<GroupDao_2>());
         }
 
         public List<string> Categories { get; } = new List<string>
@@ -68,7 +68,7 @@ namespace Kurs_Dzudo.ViewModels
             await Task.Run(() =>
             {
                 using var db = new Connector();
-                _participants = db.Ukhasniki.ToList();
+                _participants = db.Ukhasniki.ToList() ?? new List<UkhasnikiDao>();
             });
         }
 
@@ -81,63 +81,99 @@ namespace Kurs_Dzudo.ViewModels
 
         private async Task GenerateGroupsAsync()
         {
-            var groups = new List<GroupDao_2>();
-
-            await Task.Run(() =>
+            IsLoading = true;
+            try
             {
-                IEnumerable<IGrouping<string, UkhasnikiDao>> groupedParticipants;
+                var groups = new List<GroupDao_2>();
 
-                switch (FilterCategory)
+                await Task.Run(() =>
                 {
-                    case "По весу":
-                        groupedParticipants = _participants
-                            .GroupBy(p => GetWeightCategory(p.Ves));
-                        break;
-                    case "По возрасту":
-                        groupedParticipants = _participants
-                            .GroupBy(p => GetAgeCategory(p.DateSorevnovaniy));
-                        break;
-                    case "По полу":
-                        groupedParticipants = _participants
-                            .GroupBy(p => p.SecName?.EndsWith("а") == true ? "Женский" : "Мужской");
-                        break;
-                    case "По клубу":
-                        groupedParticipants = _participants
-                            .GroupBy(p => p.Club ?? "Не указан");
-                        break;
-                    default:
-                        groupedParticipants = _participants.GroupBy(p => "Все участники");
-                        break;
-                }
+                    IEnumerable<IGrouping<string, UkhasnikiDao>> groupedParticipants = _participants
+                        .GroupBy(p => "Все участники"); // Default grouping
 
-                foreach (var group in groupedParticipants)
-                {
-                    char gender = group.Key == "Женский" ? 'F' : 'M';
-
-                    var newGroup = new GroupDao_2(
-                        ageCategory: FilterCategory == "По возрасту" ? group.Key : "Общая",
-                        weightCategory: FilterCategory == "По весу" ? group.Key : "Общая",
-                        gender: gender
-                    )
+                    switch (FilterCategory)
                     {
-                        Participants = group.ToList()
-                    };
-
-                    foreach (var match in newGroup.Matches)
-                    {
-                        match.Winner = new Random().Next(2) == 0 ? match.Participant1 : match.Participant2;
-                        match.Loser = match.Winner == match.Participant1 ? match.Participant2 : match.Participant1;
-                        match.GroupId = newGroup.Id;
+                        case "По весу":
+                            groupedParticipants = _participants
+                                .GroupBy(p => GetWeightCategory(p.Ves));
+                            break;
+                        case "По возрасту":
+                            groupedParticipants = _participants
+                                .GroupBy(p => GetAgeCategory(p.DateSorevnovaniy));
+                            break;
+                        case "По полу":
+                            groupedParticipants = _participants
+                                .GroupBy(p => p.SecName?.EndsWith("а") == true ? "Женский" : "Мужской");
+                            break;
+                        case "По клубу":
+                            groupedParticipants = _participants
+                                .GroupBy(p => p.Club ?? "Не указан");
+                            break;
                     }
 
-                    groups.Add(newGroup);
-                }
-            });
+                    foreach (var group in groupedParticipants)
+                    {
+                        char gender = group.Key == "Женский" ? 'F' : 'M';
 
-            await Dispatcher.UIThread.InvokeAsync(() =>
-            {
+                        var newGroup = new GroupDao_2(
+                            ageCategory: FilterCategory == "По возрасту" ? group.Key : "Общая",
+                            weightCategory: FilterCategory == "По весу" ? group.Key : "Общая",
+                            gender: gender
+                        )
+                        {
+                            Participants = group.ToList()
+                        };
+
+                        GenerateMatchesForGroup(newGroup);
+
+                        groups.Add(newGroup);
+                    }
+                });
+
                 Groups = groups;
-            });
+            }
+            finally
+            {
+                IsLoading = false;
+            }
+        }
+
+        private void GenerateMatchesForGroup(GroupDao_2 group)
+        {
+            if (group.Participants == null || group.Participants.Count < 2)
+                return;
+
+            group.Matches = new List<Match>();
+
+            for (int i = 0; i < group.Participants.Count; i++)
+            {
+                for (int j = i + 1; j < group.Participants.Count; j++)
+                {
+                    var participant1 = group.Participants[i];
+                    var participant2 = group.Participants[j];
+
+                    if (participant1?.Name == null || participant2?.Name == null)
+                        continue;
+
+                    var match = new Match
+                    {
+                        participant1_name = participant1.Name,
+                        participant2_name = participant2.Name,
+                        Participant1 = participant1,
+                        Participant2 = participant2,
+                        GroupId = group.Id,
+                        tatamiid = 1
+                    };
+
+                    var winner = new Random().Next(2) == 0 ? participant1 : participant2;
+                    match.Winner = winner;
+                    match.winner_name = winner.Name;
+                    match.Loser = winner == participant1 ? participant2 : participant1;
+                    match.loser_name = match.Loser.Name;
+
+                    group.Matches.Add(match);
+                }
+            }
         }
 
         private async void FilterGroups()
@@ -149,17 +185,13 @@ namespace Kurs_Dzudo.ViewModels
             }
 
             var searchLower = SearchText.ToLower();
-            var filtered = _groups?
-                .Where(g => g.Participants?.Any(p =>
-                    (p.Name?.ToLower().Contains(searchLower) ?? false) ||
-                    (p.SecName?.ToLower().Contains(searchLower) ?? false) ||
-                    (p.Club?.ToLower().Contains(searchLower) ?? false)) ?? false)
+            Groups = Groups
+                .Where(g => g.Participants.Any(p =>
+                    p.Name?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) == true ||
+                    p.SecName?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) == true ||
+                    p.Club?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) == true
+                ))
                 .ToList();
-
-            await Dispatcher.UIThread.InvokeAsync(() =>
-            {
-                Groups = filtered ?? new List<GroupDao_2>();
-            });
         }
 
         private string GetWeightCategory(decimal weight)

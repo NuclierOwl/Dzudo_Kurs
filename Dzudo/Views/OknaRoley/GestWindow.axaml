@@ -21,6 +21,8 @@
 			</ComboBox.ItemTemplate>
 		</ComboBox>
 
+		
+		
 		<TabControl>
 			<TabItem Header="Участники">
 				<DataGrid x:Name="ParticipantsDataGrid" x:FieldModifier="public" AutoGenerateColumns="False" IsReadOnly="True" x:DataType="vm:UkhasnikiDao">
@@ -63,5 +65,6 @@
 				</DockPanel>
 			</TabItem>
 		</TabControl>
+		<Button Content="Назад" Click="Beak_Click" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 	</DockPanel>
 </Window>

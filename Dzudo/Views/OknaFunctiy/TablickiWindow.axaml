@@ -32,6 +32,7 @@
 			<Button Content="Экспорт"
                     Command="{Binding ExportGroupsCommand}"
                     Width="100"/>
+			<Button Content="назад" Click="Beak_Click"/>
 		</StackPanel>
 
 		<ScrollViewer>

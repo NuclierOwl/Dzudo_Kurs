@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Dzudo.Hardik.Connector.Date;
 using Kurs_Dzudo.Hardik.Connector.Date;
 using Npgsql;
-using Group = Kurs_Dzudo.Hardik.Connector.Date.Group;
+using Group = Dzudo.Hardik.Connector.Date.GroupDao_2;
 
 namespace ukhasnikis_BD_Sec.Hardik.Connect
 {
@@ -63,41 +65,44 @@ namespace ukhasnikis_BD_Sec.Hardik.Connect
 
         public List<Tatami> GetAllTatamis()
         {
-            var organizators = new List<Tatami>();
+            var tatamis = new List<Tatami>();
             using (var cmd = new NpgsqlCommand("SELECT * FROM \"Sec\".tatami", _connection))
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    organizators.Add(new Tatami
+                    tatamis.Add(new Tatami
                     {
                         Id = reader.GetInt32(reader.GetOrdinal("id")),
-                        numdber = reader.GetInt32(reader.GetOrdinal("numdber")),
+                        numdber = reader.GetInt32(reader.GetOrdinal("number")),
                         Activ = reader.GetBoolean(reader.GetOrdinal("is_active"))
                     });
                 }
             }
-            return organizators;
+            return tatamis;
         }
 
-        public void SaveMatchResults(Kurs_Dzudo.Hardik.Connector.Date.Match match)
+        public void SaveMatchResults(Match match)
         {
-            using (var cmd = new NpgsqlCommand("SELECT * FROM \"Sec\".tatami", _connection))
+            using (var cmd = new NpgsqlCommand(
+                "INSERT INTO \"Sec\".matches (group_id, tatami_id, participant1_name, participant2_name, winner_name) " +
+                "VALUES (@groupId, @tatamiId, @part1Name, @part2Name, @winnerName)", _connection))
             {
                 cmd.Parameters.AddWithValue("@groupId", match.GroupId);
-                cmd.Parameters.AddWithValue("@tatamiId", match.TatamiId);
-                cmd.Parameters.AddWithValue("@part1Id", match.Participant1.Id);
-                cmd.Parameters.AddWithValue("@part2Id", match.Participant2.Id);
-                cmd.Parameters.AddWithValue("@winnerId", match.Winner.Id);
+                cmd.Parameters.AddWithValue("@tatamiId", match.tatamiid);
+                cmd.Parameters.AddWithValue("@part1Name", match.Participant1.Name);
+                cmd.Parameters.AddWithValue("@part2Name", match.Participant2.Name);
+                cmd.Parameters.AddWithValue("@winnerName", match.Winner.Name);
 
                 cmd.ExecuteNonQuery();
             }
         }
 
-        public List<Group> GetGroupsForTatami(int tatamiId)
+        public List<GroupDao_2> GetGroupsForTatami(int tatamiId)
         {
-            var groups = new List<Group>();
+            var groups = new List<GroupDao_2>();
             var participants = new List<UkhasnikiDao>();
+
             using (var cmd = new NpgsqlCommand(
                 "SELECT u.* FROM \"Sec\".ukhasniki u " +
                 "JOIN \"Sec\".tatami_participants tp ON u.\"Name\" = tp.participant_name " +
@@ -121,16 +126,17 @@ namespace ukhasnikis_BD_Sec.Hardik.Connect
                 }
             }
 
-            var groupedParticipants = participants
-                .GroupBy(p => new { p.Ves })
-                .ToList();
+            var weightCategories = participants.Select(p => p.Ves).Distinct().ToList();
 
-
-            foreach (var groupParticipants in groupedParticipants)
+            foreach (var weight in weightCategories)
             {
-                groups.Add(new Group(
-                    $"Группа {groupParticipants.Key.Ves} кг",
-                    groupParticipants.ToList()));
+                var groupParticipants = participants.Where(p => p.Ves == weight).ToList();
+                var group = new GroupDao_2("Adult", $"{weight} kg", 'M')
+                {
+                    TatamiId = tatamiId,
+                    Participants = groupParticipants
+                };
+                groups.Add(group);
             }
 
             return groups;
@@ -152,7 +158,7 @@ namespace ukhasnikis_BD_Sec.Hardik.Connect
             }
         }
 
-        public void AddUkhasniki(UkhasnikiDao ukhasniki)
+        public async Task AddUkhasnikiAsync(UkhasnikiDao ukhasniki)
         {
             using (var cmd = new NpgsqlCommand(
                 "INSERT INTO \"Sec\".ukhasniki (\"Name\", secname, datesorevnovaniy, club, adres, ves) " +
@@ -165,7 +171,7 @@ namespace ukhasnikis_BD_Sec.Hardik.Connect
                 cmd.Parameters.AddWithValue("@Club", ukhasniki.Club ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Adres", ukhasniki.Adres ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Ves", ukhasniki.Ves);
-                cmd.ExecuteNonQuery();
+                await cmd.ExecuteNonQueryAsync();
             }
         }
 
