@@ -22,7 +22,7 @@ namespace ukhasnikis_BD_Sec.Hardik.Connect
 
         public NpgsqlConnection GetConnection() => _connection;
 
-        public List<UkhasnikiDao> GetAllUkhasnikis() // работа с участниками
+        public List<UkhasnikiDao> GetAllUkhasnikis() // получение участников
         {
             var ukhasnikis = new List<UkhasnikiDao>();
             using (var cmd = new NpgsqlCommand("SELECT * FROM \"Sec\".ukhasniki", _connection))

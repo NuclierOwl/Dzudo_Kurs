@@ -8,6 +8,7 @@ using Avalonia.Threading;
 using Kurs_Dzudo.Hardik.Connector;
 using Kurs_Dzudo.Hardik.Connector.Date;
 using ReactiveUI;
+using ukhasnikis_BD_Sec.Hardik.Connect;
 using GroupDao_2 = Dzudo.Hardik.Connector.Date.GroupDao_2;
 
 namespace Kurs_Dzudo.ViewModels
@@ -67,8 +68,8 @@ namespace Kurs_Dzudo.ViewModels
         {
             await Task.Run(() =>
             {
-                using var db = new Connector();
-                _participants = db.Ukhasniki.ToList() ?? new List<UkhasnikiDao>();
+                using var db = new DatabaseConnection();
+                _participants = db.GetAllUkhasnikis().ToList() ?? new List<UkhasnikiDao>();
             });
         }
 

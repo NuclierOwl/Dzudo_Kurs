@@ -2,18 +2,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:vm="clr-namespace:Kurs_Dzudo.Hardik.Connector.Date"
-		xmlns:dm="clr-namespace:Dzudo.ViewModels"
+        xmlns:vm="clr-namespace:Kurs_Dzudo.Hardik.Connector.Date"
+        xmlns:dm="clr-namespace:Dzudo.ViewModels"
         xmlns:local="clr-namespace:Kurs_Dzudo.Hardik.Connector.Date"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Kurs_Dzudo.GestWindow"
         Title="Гость"
-		x:DataType="dm:GestViewModel">
+        x:DataType="dm:GestViewModel">
 	<DockPanel Margin="10">
 		<ComboBox x:Name="TatamiComboBox"
-          ItemsSource="{Binding Tatamis}"
-          SelectedItem="{Binding SelectedTatami}"
-          DockPanel.Dock="Top" Margin="0,0,0,10">
+                  ItemsSource="{Binding Tatamis}"
+                  SelectedItem="{Binding SelectedTatami}"
+                  DockPanel.Dock="Top" Margin="0,0,0,10">
 			<ComboBox.ItemTemplate>
 				<DataTemplate>
 					<TextBlock Text="{Binding Id}"/>
@@ -21,11 +21,12 @@
 			</ComboBox.ItemTemplate>
 		</ComboBox>
 
-		
-		
 		<TabControl>
 			<TabItem Header="Участники">
-				<DataGrid x:Name="ParticipantsDataGrid" x:FieldModifier="public" AutoGenerateColumns="False" IsReadOnly="True" x:DataType="vm:UkhasnikiDao">
+				<DataGrid x:Name="ParticipantsDataGrid"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          ItemsSource="{Binding Participants}">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
 						<DataGridTextColumn Header="Фамилия" Binding="{Binding SecName}"/>
@@ -37,19 +38,27 @@
 
 			<TabItem Header="Матчи">
 				<DockPanel>
-					<ComboBox x:Name="GroupComboBox" x:FieldModifier="public" DockPanel.Dock="Top" Margin="0,0,0,10"
-                              SelectionChanged="OnGroupSelectionChanged">
+					<ComboBox x:Name="GroupComboBox"
+                              DockPanel.Dock="Top"
+                              Margin="10"
+                              ItemsSource="{Binding Groups}"
+                              SelectedItem="{Binding SelectedGroup}">
 						<ComboBox.ItemTemplate>
-							<DataTemplate x:DataType="local:Group">
-								<TextBlock Text="{Binding Name}"/>
+							<DataTemplate>
+								<TextBlock Text="{Binding Id}"/>
 							</DataTemplate>
 						</ComboBox.ItemTemplate>
 					</ComboBox>
 
-					<DataGrid x:Name="MatchesDataGrid" x:FieldModifier="public" AutoGenerateColumns="False" IsReadOnly="True" x:DataType="vm:Match">
+					<DataGrid x:Name="MatchesDataGrid"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              ItemsSource="{Binding Matches}">
 						<DataGrid.Columns>
-							<DataGridTextColumn Header="Претендент 1" Binding="{Binding Participant1.Name}"/>
-							<DataGridTextColumn Header="Клуб" Binding="{Binding Participant1.Club}"/>
+							<DataGridTextColumn Header="Претендент 1"
+                                              Binding="{Binding Participant1.Name}"/>
+							<DataGridTextColumn Header="Клуб"
+                                              Binding="{Binding Participant1.Club}"/>
 							<DataGridTemplateColumn Header="vs">
 								<DataGridTemplateColumn.CellTemplate>
 									<DataTemplate>
@@ -57,9 +66,12 @@
 									</DataTemplate>
 								</DataGridTemplateColumn.CellTemplate>
 							</DataGridTemplateColumn>
-							<DataGridTextColumn Header="Претендент 2" Binding="{Binding Participant2.Name}"/>
-							<DataGridTextColumn Header="Клуб" Binding="{Binding Participant2.Club}"/>
-							<DataGridTextColumn Header="Победитель" Binding="{Binding Winner.Name}"/>
+							<DataGridTextColumn Header="Претендент 2"
+                                              Binding="{Binding Participant2.Name}"/>
+							<DataGridTextColumn Header="Клуб"
+                                              Binding="{Binding Participant2.Club}"/>
+							<DataGridTextColumn Header="Победитель"
+                                              Binding="{Binding Winner.Name}"/>
 						</DataGrid.Columns>
 					</DataGrid>
 				</DockPanel>

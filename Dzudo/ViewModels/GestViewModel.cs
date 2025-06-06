@@ -12,8 +12,8 @@ public class GestViewModel : INotifyPropertyChanged
     private readonly DatabaseConnection _dbConnection;
     private List<Tatami> _tatamis;
     private List<GroupDao_2> _groups;
-    private IEnumerable<object> _participants;
-    private IEnumerable<object> _matches;
+    private IEnumerable<UkhasnikiDao> _participants;
+    private IEnumerable<Match> _matches;
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -27,17 +27,7 @@ public class GestViewModel : INotifyPropertyChanged
         }
     }
 
-    public List<GroupDao_2> Groups
-    {
-        get => _groups;
-        set
-        {
-            _groups = value;
-            OnPropertyChanged();
-        }
-    }
-
-    public IEnumerable<object> Participants
+    public IEnumerable<UkhasnikiDao> Participants
     {
         get => _participants;
         set
@@ -47,12 +37,22 @@ public class GestViewModel : INotifyPropertyChanged
         }
     }
 
-    public IEnumerable<object> Matches
+    public IEnumerable<Match> Matches
     {
         get => _matches;
         set
         {
             _matches = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public List<GroupDao_2> Groups
+    {
+        get => _groups;
+        set
+        {
+            _groups = value;
             OnPropertyChanged();
         }
     }
@@ -76,7 +76,7 @@ public class GestViewModel : INotifyPropertyChanged
 
     public void LoadMatchesForGroup(GroupDao_2 group)
     {
-        Matches = group.Matches;
+        Matches = group.Matches ?? Enumerable.Empty<Match>();
     }
 
     public void OnTatamiSelectionChanged(Tatami selectedTatami)
