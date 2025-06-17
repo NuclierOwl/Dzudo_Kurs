@@ -14,7 +14,7 @@
 			<TextBox x:Name="UserNameText" Watermark="Логин"/>
 			<TextBox x:Name="PassTextBox" Watermark="Пароль" />
 			<Button x:Name="ProverkaPorola" Content="Войти" Click="ProverkaPorola_Click"/>
-			<Button Content="Участник" Click="Izmenenia_Click"/>
+			<Button Content="Гость" Click="Izmenenia_Click"/>
 		</StackPanel>
 	</Grid>
 </Window>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1uZhYB0Stg0=",
+  "dgSpecHash": "dIKyVAWRJeo=",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\source\\repos\\Dzudo\\Dzudo\\Dzudo.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\nunit\\4.3.2\\nunit.4.3.2.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\reactiveui\\20.2.45\\reactiveui.20.2.45.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\skiasharp\\2.88.8\\skiasharp.2.88.8.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.8\\skiasharp.nativeassets.linux.2.88.8.nupkg.sha512",

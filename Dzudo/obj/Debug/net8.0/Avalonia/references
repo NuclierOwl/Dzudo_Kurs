@@ -61,6 +61,8 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.14\ref\net8.0\mscorl
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.14\ref\net8.0\netstandard.dll
 C:\Users\PC\.nuget\packages\npgsql\9.0.3\lib\net8.0\Npgsql.dll
 C:\Users\PC\.nuget\packages\npgsql.entityframeworkcore.postgresql\9.0.4\lib\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\PC\.nuget\packages\nunit\4.3.2\lib\net8.0\nunit.framework.dll
+C:\Users\PC\.nuget\packages\nunit\4.3.2\lib\net8.0\nunit.framework.legacy.dll
 C:\Users\PC\.nuget\packages\reactiveui\20.2.45\lib\net8.0\ReactiveUI.dll
 C:\Users\PC\.nuget\packages\skiasharp\2.88.8\lib\net6.0\SkiaSharp.dll
 C:\Users\PC\.nuget\packages\splat\15.3.1\lib\net8.0\Splat.dll

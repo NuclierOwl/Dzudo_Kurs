@@ -8,9 +8,9 @@ namespace Kurs_Dzudo.ViewModels
 {
     public class ControlViewModel : ReactiveObject
     {
-        private Match _currentMatch;
-        private UkhasnikiDao _selectedTatami;
-        private TimerService _timerService = new TimerService();
+        public Match _currentMatch;
+        public UkhasnikiDao _selectedTatami;
+        public TimerService _timerService = new TimerService();
 
         public ObservableCollection<Tatami> AvailableTatamis { get; } = new();
         public MatchViewModel MatchViewModel { get; } = new();
@@ -42,7 +42,7 @@ namespace Kurs_Dzudo.ViewModels
             set => this.RaiseAndSetIfChanged(ref _selectedTatami, value);
         }
 
-        private void LoadTatamis()
+        public void LoadTatamis()
         {
             using var db = new DatabaseConnection();
             var tatamis = db.GetAllTatamis();
@@ -52,7 +52,7 @@ namespace Kurs_Dzudo.ViewModels
             }
         }
 
-        private void LoadGroups()
+        public void LoadGroups()
         {
             if (SelectedTatami == null) return;
 
@@ -61,12 +61,12 @@ namespace Kurs_Dzudo.ViewModels
             MatchViewModel.LoadGroups(SelectedTatami.Id);
         }
 
-        private void AddIppon(string participantColor)
+        public void AddIppon(string participantColor)
         {
 
         }
 
-        private void ToggleMainTimer()
+        public void ToggleMainTimer()
         {
             if (_timerService.IsMainTimerRunning)
                 _timerService.StopMainTimer();
@@ -76,7 +76,7 @@ namespace Kurs_Dzudo.ViewModels
 
 
 
-        private void EndMatch()
+        public void EndMatch()
         {
             _timerService.StopMainTimer();
             if (MatchViewModel.CurrentMatch != null)

@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Kurs_Dzudo.ViewModels;
 
 namespace Kurs_Dzudo.Views.OknaFunctiy;
 

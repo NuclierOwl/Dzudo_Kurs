@@ -17,7 +17,7 @@ namespace Kurs_Dzudo.Hardik.Connector
         public DbSet<UkhasnikiDao> Ukhasniki { get; set; }
         public DbSet<OrganizatorDao> Organizatori { get; set; }
         public DbSet<GroupDao_2> Groups { get; set; }
-        public DbSet<Match> Matches { get; set; }
+        public DbSet<Match> matches { get; set; }
         public DbSet<Tatami> Tatamis { get; set; }
 
         protected override void OnModelCreating(ModelBuilder mb)

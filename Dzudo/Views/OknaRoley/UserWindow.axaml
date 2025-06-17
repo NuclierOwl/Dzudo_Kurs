@@ -4,11 +4,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Kurs_Dzudo.UserWindow"
-        Title="UserWindow">
+        Title="Окно судьи">
 
 	<Grid HorizontalAlignment="Center" VerticalAlignment="Top">
 		<StackPanel>
-			<Button Content="Создать/редактировать запись" Click="Izmenenia_Click"/>
+			<Button Content="Создать/редактировать запись" Click="Izmenenia_Click" Margin="0,5"/>
+			<Button Content="Назад" Click="Beak_Click" Margin="80,5"/>
 		</StackPanel>
 	</Grid>
 
