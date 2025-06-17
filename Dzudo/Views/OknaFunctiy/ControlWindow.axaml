@@ -9,14 +9,20 @@
 		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
 			<ComboBox ItemsSource="{Binding AvailableTatamis}"
                       SelectedItem="{Binding SelectedTatami}"
-                      Width="150"/>
+                      Width="150">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Id}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
 
 			<Button Content="Назад" Click="Beak_Click"/>
-			
+
 			<Button Content="Загрузить группы"
                     Command="{Binding LoadGroupsCommand}"/>
 		</StackPanel>
-		
+
 		<ContentControl Content="{Binding PublicDisplayViewModel}"
 						DockPanel.Dock="Left"
 						Width="400"/>

@@ -63,7 +63,20 @@ namespace Kurs_Dzudo.ViewModels
 
         public void AddIppon(string participantColor)
         {
+            if (MatchViewModel.CurrentMatch == null) return;
 
+            if (participantColor == "White")
+            {
+                MatchViewModel.CurrentMatch.winner_name = MatchViewModel.CurrentMatch.participant1_name;
+                MatchViewModel.CurrentMatch.loser_name = MatchViewModel.CurrentMatch.participant2_name;
+            }
+            else if (participantColor == "Red")
+            {
+                MatchViewModel.CurrentMatch.winner_name = MatchViewModel.CurrentMatch.participant2_name;
+                MatchViewModel.CurrentMatch.loser_name = MatchViewModel.CurrentMatch.participant1_name;
+            }
+
+            //EndMatch();
         }
 
         public void ToggleMainTimer()
