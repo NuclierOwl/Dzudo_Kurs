@@ -11,6 +11,7 @@ namespace Kurs_Dzudo.ViewModels
         public Match _currentMatch;
         public UkhasnikiDao _selectedTatami;
         public TimerService _timerService = new TimerService();
+        public MatchViewModel MatchVM => MatchViewModel;
 
         public ObservableCollection<Tatami> AvailableTatamis { get; } = new();
         public MatchViewModel MatchViewModel { get; } = new();

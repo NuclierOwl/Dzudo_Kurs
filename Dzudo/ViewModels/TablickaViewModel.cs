@@ -62,6 +62,7 @@ namespace Kurs_Dzudo.ViewModels
         {
             LoadParticipants();
             GenerateGroupsCommand = ReactiveCommand.CreateFromTask(GenerateGroupsAsync);
+            ExportGroupsCommand = ReactiveCommand.Create(ExportGroups);
         }
 
         private async Task LoadParticipants()
@@ -85,12 +86,11 @@ namespace Kurs_Dzudo.ViewModels
             IsLoading = true;
             try
             {
-                var groups = new List<GroupDao_2>();
-
-                await Task.Run(() =>
+                var groups = await Task.Run(() =>
                 {
+                    var localGroups = new List<GroupDao_2>();
                     IEnumerable<IGrouping<string, UkhasnikiDao>> groupedParticipants = _participants
-                        .GroupBy(p => "Все участники"); // Default grouping
+                        .GroupBy(p => "Все участники");
 
                     switch (FilterCategory)
                     {
@@ -127,11 +127,16 @@ namespace Kurs_Dzudo.ViewModels
 
                         GenerateMatchesForGroup(newGroup);
 
-                        groups.Add(newGroup);
+                        localGroups.Add(newGroup);
                     }
+
+                    return localGroups;
                 });
 
-                Groups = groups;
+                await Dispatcher.UIThread.InvokeAsync(() =>
+                {
+                    Groups = groups;
+                });
             }
             finally
             {
@@ -186,13 +191,23 @@ namespace Kurs_Dzudo.ViewModels
             }
 
             var searchLower = SearchText.ToLower();
-            Groups = Groups
+            var filteredGroups = Groups
                 .Where(g => g.Participants.Any(p =>
                     p.Name?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) == true ||
                     p.SecName?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) == true ||
                     p.Club?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) == true
                 ))
                 .ToList();
+
+            await Dispatcher.UIThread.InvokeAsync(() =>
+            {
+                Groups = filteredGroups;
+            });
+        }
+
+        private void ExportGroups()
+        {
+
         }
 
         private string GetWeightCategory(decimal weight)

@@ -12,7 +12,7 @@
                       Width="150">
 				<ComboBox.ItemTemplate>
 					<DataTemplate>
-						<TextBlock Text="{Binding Id}"/>
+						<TextBlock Text="{Binding Name}"/>
 					</DataTemplate>
 				</ComboBox.ItemTemplate>
 			</ComboBox>
@@ -23,9 +23,12 @@
                     Command="{Binding LoadGroupsCommand}"/>
 		</StackPanel>
 
-		<ContentControl Content="{Binding PublicDisplayViewModel}"
-						DockPanel.Dock="Left"
-						Width="400"/>
+		<!-- Добавляем ScrollViewer для списка групп -->
+		<ScrollViewer DockPanel.Dock="Left"
+                     Width="400"
+                     VerticalScrollBarVisibility="Auto">
+			<ContentControl Content="{Binding PublicDisplayViewModel}"/>
+		</ScrollViewer>
 
 		<Grid>
 			<Grid.ColumnDefinitions>
