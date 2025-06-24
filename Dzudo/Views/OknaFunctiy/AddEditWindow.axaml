@@ -70,7 +70,7 @@
                     Margin="0,0,10,0"
                     Width="100"/>
 			<Button Content="Отмена"
-                    Command="{Binding CancelCommand}"
+                    Click="Beak_Click"
                     Width="100"/>
 		</StackPanel>
 	</Grid>

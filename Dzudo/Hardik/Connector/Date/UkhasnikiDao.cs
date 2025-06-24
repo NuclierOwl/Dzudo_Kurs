@@ -11,5 +11,7 @@ namespace Kurs_Dzudo.Hardik.Connector.Date
         public string Club { get; set; }
         public string Adres { get; set; }
         public decimal Ves { get; set;}
+        public string Gender { get; set; }
+        public bool IsDisqualified { get; set; }
     }
 }

@@ -3,7 +3,7 @@
     public class Tatami
     {
         public int Id {  get; set; }
-        public int numdber { get; set; }
-        public bool Activ { get; set; }
+        public int Number { get; set; }
+        public bool IsActive { get; set; }
     }
 }

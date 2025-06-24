@@ -9,8 +9,8 @@
   <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
 	<StackPanel>
 		<Button Content="Контроль матчей" Click="Control_Click" Margin="0,5,0,0"/>
-		<Button Content="Таблички" Click="Tablicka_Click" Margin="25,5,0,0"/>
-		<Button Content="Назад" Click="Beak_Click" Margin="35,5,0,0"/>
+		<Button Content="Группы" Click="Tablicka_Click" Margin="30,5,0,0"/>
+		<Button Content="Назад" Click="Beak_Click" Margin="33,5,0,0"/>
 		</StackPanel>
 	</Grid>
 </Window>

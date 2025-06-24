@@ -24,37 +24,6 @@ public partial class GestWindow : Window
         InitializeComponent();
         _dbConnection = new DatabaseConnection();
         DataContext = new GestViewModel();
-        LoadTatamis();
-    }
-
-    private void LoadTatamis()
-    {
-        _tatamis = _dbConnection.GetAllTatamis();
-        TatamiComboBox.ItemsSource = _tatamis;
-        if (_tatamis.Any())
-        {
-            TatamiComboBox.SelectedIndex = 0;
-        }
-    }
-
-    private void OnTatamiSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (TatamiComboBox.SelectedItem is Tatami selectedTatami)
-        {
-            _groups = _dbConnection.GetGroupsForTatami(selectedTatami.Id);
-            GroupComboBox.ItemsSource = _groups;
-
-            var participants = _groups.SelectMany(g => g.Participants).Distinct().ToList();
-            ParticipantsDataGrid.ItemsSource = participants;
-        }
-    }
-
-    private void OnGroupSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (GroupComboBox.SelectedItem is GroupDao_2 selectedGroup)
-        {
-            MatchesDataGrid.ItemsSource = selectedGroup.Matches;
-        }
     }
 
     public void Beak_Click(object sender, RoutedEventArgs e)

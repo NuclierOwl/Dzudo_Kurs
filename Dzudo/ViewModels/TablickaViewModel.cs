@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive;
-using System.Threading.Tasks;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
+using Avalonia.Data.Converters;
 using Avalonia.Threading;
-using Kurs_Dzudo.Hardik.Connector;
 using Kurs_Dzudo.Hardik.Connector.Date;
 using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Reactive;
 using ukhasnikis_BD_Sec.Hardik.Connect;
 using GroupDao_2 = Dzudo.Hardik.Connector.Date.GroupDao_2;
 
@@ -60,18 +60,18 @@ namespace Kurs_Dzudo.ViewModels
 
         public TablickaViewModel(Window ownerWindow)
         {
+            GenerateGroupsCommand = ReactiveCommand.Create(GenerateGroups);
+
             LoadParticipants();
-            GenerateGroupsCommand = ReactiveCommand.CreateFromTask(GenerateGroupsAsync);
-            ExportGroupsCommand = ReactiveCommand.Create(ExportGroups);
+            GenerateGroups();
         }
 
-        private async Task LoadParticipants()
+        private void LoadParticipants()
         {
-            await Task.Run(() =>
-            {
-                using var db = new DatabaseConnection();
-                _participants = db.GetAllUkhasnikis().ToList() ?? new List<UkhasnikiDao>();
-            });
+            IsLoading = true;
+            using var db = new DatabaseConnection();
+            _participants = db.GetAllUkhasnikis()?.ToList() ?? new List<UkhasnikiDao>();
+            IsLoading = false;
         }
 
         private bool _isLoading;
@@ -81,67 +81,52 @@ namespace Kurs_Dzudo.ViewModels
             set => this.RaiseAndSetIfChanged(ref _isLoading, value);
         }
 
-        private async Task GenerateGroupsAsync()
+        public void GenerateGroups()
         {
             IsLoading = true;
-            try
+
+            var groups = new List<GroupDao_2>();
+            IEnumerable<IGrouping<string, UkhasnikiDao>> groupedParticipants = _participants.GroupBy(p => "Все участники");
+
+            switch (FilterCategory)
             {
-                var groups = await Task.Run(() =>
-                {
-                    var localGroups = new List<GroupDao_2>();
-                    IEnumerable<IGrouping<string, UkhasnikiDao>> groupedParticipants = _participants
-                        .GroupBy(p => "Все участники");
-
-                    switch (FilterCategory)
-                    {
-                        case "По весу":
-                            groupedParticipants = _participants
-                                .GroupBy(p => GetWeightCategory(p.Ves));
-                            break;
-                        case "По возрасту":
-                            groupedParticipants = _participants
-                                .GroupBy(p => GetAgeCategory(p.DateSorevnovaniy));
-                            break;
-                        case "По полу":
-                            groupedParticipants = _participants
-                                .GroupBy(p => p.SecName?.EndsWith("а") == true ? "Женский" : "Мужской");
-                            break;
-                        case "По клубу":
-                            groupedParticipants = _participants
-                                .GroupBy(p => p.Club ?? "Не указан");
-                            break;
-                    }
-
-                    foreach (var group in groupedParticipants)
-                    {
-                        char gender = group.Key == "Женский" ? 'F' : 'M';
-
-                        var newGroup = new GroupDao_2(
-                            ageCategory: FilterCategory == "По возрасту" ? group.Key : "Общая",
-                            weightCategory: FilterCategory == "По весу" ? group.Key : "Общая",
-                            gender: gender
-                        )
-                        {
-                            Participants = group.ToList()
-                        };
-
-                        GenerateMatchesForGroup(newGroup);
-
-                        localGroups.Add(newGroup);
-                    }
-
-                    return localGroups;
-                });
-
-                await Dispatcher.UIThread.InvokeAsync(() =>
-                {
-                    Groups = groups;
-                });
+                case "По весу":
+                    groupedParticipants = _participants
+                        .GroupBy(p => GetWeightCategory(p.Ves));
+                    break;
+                case "По возрасту":
+                    groupedParticipants = _participants
+                        .GroupBy(p => GetAgeCategory(p.DateSorevnovaniy));
+                    break;
+                case "По полу":
+                    groupedParticipants = _participants
+                        .GroupBy(p => p.SecName?.EndsWith("а") == true ? "Женский" : "Мужской");
+                    break;
+                case "По клубу":
+                    groupedParticipants = _participants
+                        .GroupBy(p => p.Club ?? "Не указан");
+                    break;
             }
-            finally
+
+            foreach (var group in groupedParticipants)
             {
-                IsLoading = false;
+                char gender = group.Key == "Женский" ? 'F' : 'M';
+
+                var newGroup = new GroupDao_2(
+                    ageCategory: FilterCategory == "По возрасту" ? group.Key : "Общая",
+                    weightCategory: FilterCategory == "По весу" ? group.Key : "Общая",
+                    gender: gender
+                )
+                {
+                    Participants = group.ToList()
+                };
+
+                GenerateMatchesForGroup(newGroup);
+                groups.Add(newGroup);
             }
+
+            Groups = groups;
+            IsLoading = false;
         }
 
         private void GenerateMatchesForGroup(GroupDao_2 group)
@@ -170,6 +155,8 @@ namespace Kurs_Dzudo.ViewModels
                         GroupId = group.Id,
                         tatamiid = 1
                     };
+                    
+                    //Тестовое, удолить по завершею
 
                     var winner = new Random().Next(2) == 0 ? participant1 : participant2;
                     match.Winner = winner;
@@ -182,11 +169,11 @@ namespace Kurs_Dzudo.ViewModels
             }
         }
 
-        private async void FilterGroups()
+        private void FilterGroups()
         {
             if (string.IsNullOrWhiteSpace(SearchText))
             {
-                await GenerateGroupsAsync();
+                GenerateGroups();
                 return;
             }
 
@@ -199,15 +186,7 @@ namespace Kurs_Dzudo.ViewModels
                 ))
                 .ToList();
 
-            await Dispatcher.UIThread.InvokeAsync(() =>
-            {
-                Groups = filteredGroups;
-            });
-        }
-
-        private void ExportGroups()
-        {
-
+            Groups = filteredGroups;
         }
 
         private string GetWeightCategory(decimal weight)

@@ -23,7 +23,6 @@
                     Command="{Binding LoadGroupsCommand}"/>
 		</StackPanel>
 
-		<!-- Добавляем ScrollViewer для списка групп -->
 		<ScrollViewer DockPanel.Dock="Left"
                      Width="400"
                      VerticalScrollBarVisibility="Auto">
