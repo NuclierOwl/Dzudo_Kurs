@@ -15,10 +15,23 @@ namespace Kurs_Dzudo.ViewModels
 {
     public class TablickaViewModel : ReactiveObject
     {
-        private List<UkhasnikiDao> _participants = new List<UkhasnikiDao>();
         private List<GroupDao_2> _groups = new List<GroupDao_2>();
         private string _searchText;
         private string _filterCategory = "Все";
+        private List<UkhasnikiDao> _participants;
+        private List<Match> _matches;
+
+        public List<UkhasnikiDao> Participants
+        {
+            get => _participants;
+            set => this.RaiseAndSetIfChanged(ref _participants, value);
+        }
+
+        public List<Match> Matches
+        {
+            get => _matches;
+            set => this.RaiseAndSetIfChanged(ref _matches, value);
+        }
 
         public List<GroupDao_2> Groups
         {
@@ -85,8 +98,12 @@ namespace Kurs_Dzudo.ViewModels
         {
             IsLoading = true;
 
-            var groups = new List<GroupDao_2>();
             IEnumerable<IGrouping<string, UkhasnikiDao>> groupedParticipants = _participants.GroupBy(p => "Все участники");
+
+            using var db = new DatabaseConnection();
+            var groups = new List<GroupDao_2>();
+
+            _participants = db.GetAllUkhasnikis();
 
             switch (FilterCategory)
             {
@@ -110,7 +127,7 @@ namespace Kurs_Dzudo.ViewModels
 
             foreach (var group in groupedParticipants)
             {
-                char gender = group.Key == "Женский" ? 'F' : 'M';
+                char gender = group.Key == "F" ? 'F' : 'M';
 
                 var newGroup = new GroupDao_2(
                     ageCategory: FilterCategory == "По возрасту" ? group.Key : "Общая",
@@ -121,7 +138,11 @@ namespace Kurs_Dzudo.ViewModels
                     Participants = group.ToList()
                 };
 
-                GenerateMatchesForGroup(newGroup);
+                var allMatches = db.GetAllMatches();
+                newGroup.Matches = allMatches
+                    .Where(m => m.GroupId == newGroup.Id)
+                    .ToList();
+
                 groups.Add(newGroup);
             }
 
@@ -156,7 +177,7 @@ namespace Kurs_Dzudo.ViewModels
                         tatamiid = 1
                     };
                     
-                    //Тестовое, удолить по завершею
+                    //Тестовое, убрать по завершею
 
                     var winner = new Random().Next(2) == 0 ? participant1 : participant2;
                     match.Winner = winner;

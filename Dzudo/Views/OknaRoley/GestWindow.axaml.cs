@@ -32,4 +32,11 @@ public partial class GestWindow : Window
         next.Show();
         this.Close();
     }
+
+    public void Match_Click(object sender, RoutedEventArgs e)
+    {
+        var next = new MatchWindow();
+        next.Show();
+        this.Close();
+    }
 }

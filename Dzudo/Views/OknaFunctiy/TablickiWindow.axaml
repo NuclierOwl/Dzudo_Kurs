@@ -39,7 +39,7 @@
 							<StackPanel>
 								<TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="16"/>
 
-								<DataGrid ItemsSource="{Binding Participants}" AutoGenerateColumns="False" Margin="0,10,0,0">
+								<DataGrid ItemsSource="{Binding Participants}" AutoGenerateColumns="True" Margin="0,10,0,0">
 									<DataGrid.Columns>
 										<DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="*"/>
 										<DataGridTextColumn Header="Фамилия" Binding="{Binding SecName}" Width="*"/>

@@ -15,36 +15,36 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dzudo
-build_property.ProjectDir = C:\Users\PC\source\repos\Dzudo\Dzudo\
+build_property.ProjectDir = C:\Users\PC\source\repos\Dzudo_Kurs\Dzudo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/App.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/MainWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/MatchWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/MatchWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/OknaFunctiy/AddEditWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/OknaFunctiy/AddEditWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/OknaFunctiy/ControlWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/OknaFunctiy/ControlWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/OknaFunctiy/TablickiWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/OknaFunctiy/TablickiWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/OknaRoley/AdminWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/OknaRoley/AdminWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/OknaRoley/GestWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/OknaRoley/GestWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/PC/source/repos/Dzudo/Dzudo/Views/OknaRoley/UserWindow.axaml]
+[C:/Users/PC/source/repos/Dzudo_Kurs/Dzudo/Views/OknaRoley/UserWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

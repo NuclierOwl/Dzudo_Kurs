@@ -11,6 +11,7 @@
 
 	<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
 		<StackPanel VerticalAlignment="Center">
+			<Image Width="100" Height="100" Source="C:\Users\PC\source\Dopolnenia\Kartinki\Iconki/logoDzudo.jpg" Margin="0,0,0,20"/>
 			<TextBox x:Name="UserNameText" Watermark="Логин"/>
 			<TextBox x:Name="PassTextBox" Watermark="Пароль" />
 			<Button x:Name="ProverkaPorola" Content="Войти" Click="ProverkaPorola_Click"/>

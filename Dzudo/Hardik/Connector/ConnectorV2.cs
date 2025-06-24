@@ -228,6 +228,94 @@ namespace ukhasnikis_BD_Sec.Hardik.Connect
             }
         }
 
+        public List<Match> GetAllMatches()
+        {
+            var matches = new List<Match>();
+
+            using (var cmd = new NpgsqlCommand(
+                "SELECT m.*, " +
+                "u1.\"Name\" as p1_name, u1.secname as p1_secname, u1.datesorevnovaniy as p1_datesorev, u1.club as p1_club, u1.adres as p1_adres, u1.ves as p1_ves, u1.gender as p1_gender, " +
+                "u2.\"Name\" as p2_name, u2.secname as p2_secname, u2.datesorevnovaniy as p2_datesorev, u2.club as p2_club, u2.adres as p2_adres, u2.ves as p2_ves, u2.gender as p2_gender, " +
+                "uw.\"Name\" as w_name, uw.secname as w_secname, uw.datesorevnovaniy as w_datesorev, uw.club as w_club, uw.adres as w_adres, uw.ves as w_ves, uw.gender as w_gender, " +
+                "ul.\"Name\" as l_name, ul.secname as l_secname, ul.datesorevnovaniy as l_datesorev, ul.club as l_club, ul.adres as l_adres, ul.ves as l_ves, ul.gender as l_gender " +
+                "FROM \"Sec\".matches m " +
+                "LEFT JOIN \"Sec\".ukhasniki u1 ON m.participant1_name = u1.\"Name\" " +
+                "LEFT JOIN \"Sec\".ukhasniki u2 ON m.participant2_name = u2.\"Name\" " +
+                "LEFT JOIN \"Sec\".ukhasniki uw ON m.winner_name = uw.\"Name\" " +
+                "LEFT JOIN \"Sec\".ukhasniki ul ON m.loser_name = ul.\"Name\"",
+                _connection))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var match = new Match
+                    {
+                        GroupId = reader.GetInt32(reader.GetOrdinal("groupid")),
+                        tatamiid = reader.GetInt32(reader.GetOrdinal("tatamiid")),
+                        participant1_name = reader.GetString(reader.GetOrdinal("participant1_name")),
+                        participant2_name = reader.GetString(reader.GetOrdinal("participant2_name")),
+                        winner_name = reader.IsDBNull(reader.GetOrdinal("winner_name")) ? null : reader.GetString(reader.GetOrdinal("winner_name")),
+                        loser_name = reader.IsDBNull(reader.GetOrdinal("loser_name")) ? null : reader.GetString(reader.GetOrdinal("loser_name"))
+                    };
+
+                    // Заполняем данные участников
+                    match.Participant1 = new UkhasnikiDao
+                    {
+                        Name = reader.GetString(reader.GetOrdinal("p1_name")),
+                        SecName = reader.IsDBNull(reader.GetOrdinal("p1_secname")) ? null : reader.GetString(reader.GetOrdinal("p1_secname")),
+                        DateSorevnovaniy = reader.IsDBNull(reader.GetOrdinal("p1_datesorev")) ? default : DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("p1_datesorev"))),
+                        Club = reader.IsDBNull(reader.GetOrdinal("p1_club")) ? null : reader.GetString(reader.GetOrdinal("p1_club")),
+                        Adres = reader.IsDBNull(reader.GetOrdinal("p1_adres")) ? null : reader.GetString(reader.GetOrdinal("p1_adres")),
+                        Ves = reader.IsDBNull(reader.GetOrdinal("p1_ves")) ? 0 : reader.GetDecimal(reader.GetOrdinal("p1_ves")),
+                        Gender = reader.IsDBNull(reader.GetOrdinal("p1_gender")) ? null : reader.GetString(reader.GetOrdinal("p1_gender"))
+                    };
+
+                    match.Participant2 = new UkhasnikiDao
+                    {
+                        Name = reader.GetString(reader.GetOrdinal("p2_name")),
+                        SecName = reader.IsDBNull(reader.GetOrdinal("p2_secname")) ? null : reader.GetString(reader.GetOrdinal("p2_secname")),
+                        DateSorevnovaniy = reader.IsDBNull(reader.GetOrdinal("p2_datesorev")) ? default : DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("p2_datesorev"))),
+                        Club = reader.IsDBNull(reader.GetOrdinal("p2_club")) ? null : reader.GetString(reader.GetOrdinal("p2_club")),
+                        Adres = reader.IsDBNull(reader.GetOrdinal("p2_adres")) ? null : reader.GetString(reader.GetOrdinal("p2_adres")),
+                        Ves = reader.IsDBNull(reader.GetOrdinal("p2_ves")) ? 0 : reader.GetDecimal(reader.GetOrdinal("p2_ves")),
+                        Gender = reader.IsDBNull(reader.GetOrdinal("p2_gender")) ? null : reader.GetString(reader.GetOrdinal("p2_gender"))
+                    };
+
+                    if (match.winner_name != null)
+                    {
+                        match.Winner = new UkhasnikiDao
+                        {
+                            Name = reader.GetString(reader.GetOrdinal("w_name")),
+                            SecName = reader.IsDBNull(reader.GetOrdinal("w_secname")) ? null : reader.GetString(reader.GetOrdinal("w_secname")),
+                            DateSorevnovaniy = reader.IsDBNull(reader.GetOrdinal("w_datesorev")) ? default : DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("w_datesorev"))),
+                            Club = reader.IsDBNull(reader.GetOrdinal("w_club")) ? null : reader.GetString(reader.GetOrdinal("w_club")),
+                            Adres = reader.IsDBNull(reader.GetOrdinal("w_adres")) ? null : reader.GetString(reader.GetOrdinal("w_adres")),
+                            Ves = reader.IsDBNull(reader.GetOrdinal("w_ves")) ? 0 : reader.GetDecimal(reader.GetOrdinal("w_ves")),
+                            Gender = reader.IsDBNull(reader.GetOrdinal("w_gender")) ? null : reader.GetString(reader.GetOrdinal("w_gender"))
+                        };
+                    }
+
+                    if (match.loser_name != null)
+                    {
+                        match.Loser = new UkhasnikiDao
+                        {
+                            Name = reader.GetString(reader.GetOrdinal("l_name")),
+                            SecName = reader.IsDBNull(reader.GetOrdinal("l_secname")) ? null : reader.GetString(reader.GetOrdinal("l_secname")),
+                            DateSorevnovaniy = reader.IsDBNull(reader.GetOrdinal("l_datesorev")) ? default : DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("l_datesorev"))),
+                            Club = reader.IsDBNull(reader.GetOrdinal("l_club")) ? null : reader.GetString(reader.GetOrdinal("l_club")),
+                            Adres = reader.IsDBNull(reader.GetOrdinal("l_adres")) ? null : reader.GetString(reader.GetOrdinal("l_adres")),
+                            Ves = reader.IsDBNull(reader.GetOrdinal("l_ves")) ? 0 : reader.GetDecimal(reader.GetOrdinal("l_ves")),
+                            Gender = reader.IsDBNull(reader.GetOrdinal("l_gender")) ? null : reader.GetString(reader.GetOrdinal("l_gender"))
+                        };
+                    }
+
+                    matches.Add(match);
+                }
+            }
+
+            return matches;
+        }
+
         public List<string> GetWeightCategories()
         {
             var categories = new List<string>();

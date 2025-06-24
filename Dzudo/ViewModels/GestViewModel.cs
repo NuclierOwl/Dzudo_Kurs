@@ -66,6 +66,8 @@ public class GestViewModel : INotifyPropertyChanged
     private void LoadTatamis()
     {
         Tatamis = _dbConnection.GetAllTatamis();
+        Participants = _dbConnection.GetAllUkhasnikis();
+
     }
 
     public void LoadGroupsForTatami(int tatamiId)
@@ -76,7 +78,7 @@ public class GestViewModel : INotifyPropertyChanged
 
     public void LoadMatchesForGroup(GroupDao_2 group)
     {
-        Matches = group.Matches ?? Enumerable.Empty<Match>();
+        Matches = _dbConnection.GetAllMatches();
     }
 
     public void OnTatamiSelectionChanged(Tatami selectedTatami)

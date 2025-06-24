@@ -21,11 +21,11 @@
 			</ComboBox>
 
 			<Button Content="Назад" Click="Beak_Click" HorizontalAlignment="Right"/>
+			<!--<Button Content="Матчи" Click="Match_Click" HorizontalAlignment="Right"/> -->
 		</StackPanel>
 
 		<!-- Основное содержимое в виде вкладок -->
 		<TabControl>
-			<!-- Вкладка с участниками -->
 			<TabItem Header="Участники">
 				<DataGrid ItemsSource="{Binding Participants}" IsReadOnly="True">
 					<DataGrid.Columns>

@@ -6,7 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Kurs_Dzudo.MatchWindow"
         x:DataType="vm:MatchViewModel"
-        Title="Ýêðàí ñîðåâíîâàíèé">
+        Title="Ð­ÐºÑ€Ð°Ð½ ÑÐ¾Ñ€ÐµÐ²Ð½Ð¾Ð²Ð°Ð½Ð¸Ð¹">
 
 	<Grid>
 		<Grid.RowDefinitions>
@@ -28,7 +28,7 @@
 			<Border Grid.Column="0" Background="LightGray" Margin="10">
 				<StackPanel>
 					<TextBlock Text="{Binding CurrentMatch.CategoryInfo}" FontSize="24"/>
-					<TextBlock Text="Òåêóùàÿ ñõâàòêà" FontSize="20"/>
+					<TextBlock Text="Ð¢ÐµÐºÑƒÑ‰Ð°Ñ ÑÑ…Ð²Ð°Ñ‚ÐºÐ°" FontSize="20"/>
 					<StackPanel Orientation="Horizontal">
 						<Border Background="White" Width="200" Height="300">
 							<TextBlock Text="{Binding CurrentMatch.Participant1.Name}"/>
@@ -43,7 +43,7 @@
 			<Border Grid.Column="1" Background="LightGray" Margin="10">
 				<StackPanel>
 					<TextBlock Text="{Binding NextMatch.CategoryInfo}" FontSize="24"/>
-					<TextBlock Text="Ñëåäóþùàÿ ñõâàòêà" FontSize="20"/>
+					<TextBlock Text="Ð¡Ð»ÐµÐ´ÑƒÑŽÑ‰Ð°Ñ ÑÑ…Ð²Ð°Ñ‚ÐºÐ°" FontSize="20"/>
 					<StackPanel Orientation="Horizontal">
 						<Border Background="White" Width="200" Height="300">
 							<TextBlock Text="{Binding CurrentMatch.Participant1.Name}"/>
